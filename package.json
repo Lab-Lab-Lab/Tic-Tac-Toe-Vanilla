@@ -1,0 +1,19 @@
+{
+  "name": "tic-tac-toe-vanilla",
+  "version": "1.0.0",
+  "description": "Vanilla JS widget that toggles a cell on click between empty, X, and O. Starts with whatever symbol it thinks may be \"next\".",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lab-Lab-Lab/Tic-Tac-Toe-Vanilla.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lab-Lab-Lab/Tic-Tac-Toe-Vanilla/issues"
+  },
+  "homepage": "https://github.com/Lab-Lab-Lab/Tic-Tac-Toe-Vanilla#readme"
+}

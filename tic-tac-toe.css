@@ -1,0 +1,36 @@
+.tt-board {
+  width: 6em;
+  min-height: 6em;
+}
+
+.tt-row {
+  display: flex;
+  flex-direction: row;
+  min-width: 6em;
+  min-height: 2em;
+}
+
+.tt-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 2em;
+  min-height: 2em;
+  border: 0.0625em solid #450084;
+  font-family: monospace;
+}
+
+.debug {
+  .tt-board {
+    background-color: red;
+    border: 2px dashed #450084;
+    }
+  .tt-row {
+    background-color: green;
+    border: 2px dashed #450084;
+  }
+  .tt-cell {
+    background-color: blue;
+    border: 2px dashed #450084;
+  }
+}

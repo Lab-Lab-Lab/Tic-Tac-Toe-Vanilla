@@ -10,23 +10,37 @@
 const tttSymbols = ['X', 'O'];
 let symbolsEntered = 0;
 
-function createTTBoard(elem) {
+function getState(elem) {
+  const rows = elem.querySelectorAll('.tt-row');
+  const state = Array.from(rows).map(row => 
+    Array.from(row.querySelectorAll('.tt-cell')).map(cell => cell.textContent)
+  );
+  return state;
+}
+
+function createTTBoard(elem, startingState) {
   const board = document.createElement('div');
-  const rows = createRows()
+  const rows = createRows(startingState)
   board.classList.add('tt-board');
   rows.forEach(row => board.appendChild(row));
-  elem.appendChild(board);
-  board.addEventListener('click', onClick);
+  const canceler = setTimeout(() => {
+    elem.innerHTML = '';
+    elem.appendChild(board);
+    board.addEventListener('click', onClick);
+  }, 5000)
   return board;
 }
 
-function createRows() {
+function createRows(startingState) {
   const rows = [];
   for (let i = 0; i < 3; i++) {
     const row = document.createElement('div');
     row.classList.add('tt-row');
     for (let j = 0; j < 3; j++) {
       const cell = document.createElement('div');
+      if (startingState && startingState[i] && startingState[i].length === 3 && startingState[i][j] !== undefined) {
+        cell.textContent = startingState[i][j];
+      }
       cell.classList.add('tt-cell');
       row.appendChild(cell);
     }

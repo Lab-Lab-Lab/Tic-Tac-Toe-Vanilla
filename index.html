@@ -8,11 +8,22 @@
 </head>
 <body>
   <div id="board"></div>
+  <div id="board2"></div>
+
   <script src="index.js"></script>
   <script>
     // const board = document.getElementById('board');
     // console.log('board', board);
     const tttBoard = createTTBoard(board);
+    const tttBoard2 = createTTBoard(board2, [
+      ['O','',''],
+      ['','X',''],
+      ['','',''],
+    ]);
+    setTimeout(() =>{
+      console.log('board1', getState(board))
+      console.log('board2', getState(board2))
+    }, 6000)
   </script>
 </body>
 </html>
